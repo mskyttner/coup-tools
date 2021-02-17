@@ -7,13 +7,20 @@ A couple of tools to convert XML to JSON on the command line:
 - quicktype (various langs) can generate JSON Schema and code, it provides a dockerized CLI command based on https://github.com/quicktype/quicktype
 - jv (Go) contains a JSON Schema validation tool through a dockerized CLI command based on https://github.com/ory/jsonschema
 
-## Installation
+## Local build and installation
 
-Use the Makefiles to build and install the tools.
+To build these CLI tools, docker is required. 
+
+Recent versions of docker can build images using BuildKit (what GitHub Actions use when building containers)
+
+Please [activate this feature first](https://docs.docker.com/buildx/working-with-buildx/#set-buildx-as-the-default-builder) (otherwise a complaint related to the --load flag will appear):
+
+		docker install buildx 
+
+Then use the Makefiles to build and install the tools.
 
 		make build
 
-To build these CLI tools, docker is required.
 
 ## Usage
 
@@ -35,8 +42,9 @@ Using these CLI tools, XML can be converted to JSON with a JSON Schema which all
 
 ## Thoughts
 
-The highly nested format in the XML-file can be flattened.
+The highly nested format in the XML-file can be flattened into a tabular format, which can be stored and queried in a database. See the json2xlsx.R file for an example with a conversion attempt into the xlsx "input template" format.
 
-See the json2xlsx.R file.
+In general regarding those few .R-files in this repo, these should go into an R-package and could then be packaged and distributed in a container. Currently dependencies will need to be installed locally on the host, for example using commands like "R -e 'install.packages("arrow")'". 
 
+An R-package can also integrate C++ code for example using `cpp11`, see https://cpp11.r-lib.org/articles/cpp11.html#package for more info.
 
