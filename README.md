@@ -7,6 +7,10 @@ A couple of tools to convert XML to JSON on the command line:
 - quicktype (various langs) can generate JSON Schema and code, it provides a dockerized CLI command based on https://github.com/quicktype/quicktype
 - jv (Go) contains a JSON Schema validation tool through a dockerized CLI command based on https://github.com/ory/jsonschema
 
+A build of the msimcoup command line tool is also provided:
+
+- msimcoup, it provides a dockerized CLI command based on https://github.com/pejtranholmen/msimcoup3.git
+
 ## Local build and installation
 
 To build these CLI tools, docker is required. 

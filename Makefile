@@ -7,6 +7,7 @@ build:
 	make -C xml-to-json build
 	make -C jv build
 	make -C quicktype build
+	make -C msimcoup
 
 test:
 	# two conversions from xml to json
