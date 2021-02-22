@@ -17,6 +17,9 @@ Year2D\_Multi\_00541.xml and Climate.xls files provided):
 
   - [Graph generated from climate.xls](/climate/index.html)
 
+  - [Graph generated from climate.xls - time series aggregation and
+    units used](/climate/monthly.html)
+
   - [Flattened variant of JSON instance](Year2D_Multi_00541.csv)
 
   - [Flattened variant of JSON instance](Year2D_Multi_00541.parquet)
